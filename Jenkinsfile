@@ -11,7 +11,7 @@
  }
  stage('AnsibleExecution'){
   steps{
-    ansiblePlaybook credentialsId: 'auser', installation: 'ansible', inventory: 'dhost.inv', playbook: 'ansible.yml', vaultTmpPath: ''
+   ansiblePlaybook credentialsId: 'auser', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dhost.inv', playbook: 'apache.yml', vaultTmpPath: ''
       }
     }
 }
